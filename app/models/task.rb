@@ -6,6 +6,10 @@ class Task < ApplicationRecord
 
     belongs_to :user
 
+    scope :recent, -> { order(created_at: :desk) } 
+# scorpeを使うと繰り返し利用される絞り込み条件をスッキリ読みやすくできる
+# クエリー用のメソッドの連続した呼び出し部分をまとめて名前をつけて、カスタム用のメソッドとして使う。
+
     private
 
     def validate_name_not_including_comma
