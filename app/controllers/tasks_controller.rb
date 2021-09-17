@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 # before_actionでアクションが実行される前に呼び出す。
 
   def index
-    @tasks = current_user.tasks.order(created_at: :desc)
+    @tasks = current_user.tasks.recent
   end
 
   def show
