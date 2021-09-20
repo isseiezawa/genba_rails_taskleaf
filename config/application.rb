@@ -10,6 +10,8 @@ module Taskleaf
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.time_zone = 'Asia/Tokyo'
+    # ↑タイムゾーンのデフォルトをUTC(協定世界時間)から日本時間に設定
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
